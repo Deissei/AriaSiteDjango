@@ -5,7 +5,7 @@
     <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
     <!-- Image Logo -->
-    <a class="navbar-brand logo-image" href="index.html"><img src="{% static 'images/logo.svg' %}" alt="alternative"></a>
+    <a class="navbar-brand logo-image" href="./"><img src="{{ settings.logo.url }}" alt="alternative"></a>
     
     <!-- Mobile Menu Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll" href="#header">ГЛАВНАЯ <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="#intro">INTRO</a>
@@ -49,13 +49,13 @@
         </ul>
         <span class="nav-item social-icons">
             <span class="fa-stack">
-                <a href="#your-link">
+                <a href="{{ settings.facebook }}">
                     <span class="hexagon"></span>
                     <i class="fab fa-facebook-f fa-stack-1x"></i>
                 </a>
             </span>
             <span class="fa-stack">
-                <a href="#your-link">
+                <a href="{{ settings.twitter }}">
                     <span class="hexagon"></span>
                     <i class="fab fa-twitter fa-stack-1x"></i>
                 </a>
@@ -67,15 +67,15 @@
 
 
 <!-- Header -->
-<header id="header" class="header">
+<header id="header" class="header" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url({{ settings.banner.url }}) center center no-repeat; background-size: cover;">
     <div class="header-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <h1>BUSINESS <span id="js-rotating">TEMPLATE, SERVICES, SOLUTIONS</span></h1>
-                        <p class="p-heading p-large">Aria is a top consultancy company specializing in business growth using online marketing and conversion optimization tactics</p>
-                        <a class="btn-solid-lg page-scroll" href="#intro">DISCOVER</a>
+                        <h1>{{ settings.title }}</h1>
+                        <p class="p-heading p-large">{{ settings.description }}</p>
+                        <a class="btn-solid-lg page-scroll" href="#intro">ВСТУПЛЕНИЕ</a>
                     </div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
