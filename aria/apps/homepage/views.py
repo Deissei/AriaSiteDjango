@@ -4,4 +4,4 @@ from django.views.generic import View
 
 class HomePageView(View):
     def get(self, request):
-        return render(request, 'index.html', locals())
+        return render(request, 'home/index.html', locals())

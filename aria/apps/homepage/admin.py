@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import SettingMain
+
+
+@admin.register(SettingMain)
+class SettingAdmin(admin.ModelAdmin):
+    list_display = ['title', 'activate']
